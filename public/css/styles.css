@@ -1,0 +1,244 @@
+/* Nesting */
+/* SCSS */
+nav {
+  width: 100%;
+  padding-bottom: 2em;
+  font-family: "Bitcount Grid Double", system-ui;
+  font-size: 1em;
+  font-font-weight: 300;
+  float: left;
+}
+nav span {
+  float: right;
+}
+nav ul {
+  padding: 0;
+  list-style-type: none;
+}
+nav ul li {
+  float: left;
+  margin: 0 5px 0 0;
+  color: rgb(255, 255, 255);
+}
+nav ul li a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Variables */
+html {
+  font-size: 1em;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #28215e;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  height: 50px;
+  width: 100%;
+  margin: 1em auto 1em auto;
+}
+
+main {
+  background: rgb(255, 255, 255);
+  width: 100%;
+  min-height: 600px;
+  height: auto;
+  padding: 1.5%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+}
+main #left {
+  box-sizing: border-box;
+  width: 50%;
+  height: 600px;
+}
+main #left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(51%) brightness(134%) opacity(36%);
+  -webkit-filter: grayscale(51%) brightness(134%) opacity(36%);
+  -moz-filter: grayscale(51%) brightness(134%) opacity(36%);
+}
+main #right {
+  width: 50%;
+  height: 600px;
+  box-sizing: border-box;
+  padding: 0 2em;
+}
+main #full {
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+  float: left;
+  background: #f0f0f5;
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 8em;
+}
+main #full h1 {
+  padding: 0;
+}
+main #full h3 {
+  font-size: 2em;
+  color: rgb(49, 49, 48);
+}
+main #full span {
+  font-family: "Bitcount Grid Double", system-ui;
+  font-size: 2em;
+}
+main #panel {
+  width: 100%;
+  height: 100%;
+  min-height: 200%;
+  background: #f0f0f5;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 1em 0 1em 0;
+  margin-bottom: 1em;
+}
+main #panel h3 {
+  font-size: 2em;
+  color: rgb(49, 49, 48);
+}
+main #panel ul {
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+main #panel ul li {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  margin: 0 1em;
+  color: rgb(49, 49, 48);
+  font-size: 0.85em;
+}
+main #panel ul li a {
+  color: rgb(58, 107, 212);
+}
+main #panel ul li a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  width: 1350px;
+  margin: 2em auto;
+  padding-left: 80px;
+  font-size: 0.85em;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  cursor: pointer;
+}
+
+button, .submit-button.secondary, .submit-button {
+  color: rgb(255, 255, 255);
+  width: 120px;
+  height: 40px;
+  margin: 2em;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.submit-button {
+  border: 1px rgb(49, 49, 48);
+  background: #28215e;
+}
+
+.submit-button.secondary {
+  color: #28215e;
+  border: 1px solid #28215e;
+  background: #f0f0f5;
+}
+
+/* css for registration form and errors*/
+/* Styles for listing table */
+body {
+  padding: 40px 10px;
+}
+
+.listing-reg h1 {
+  text-align: center;
+  margin: 0 0 2rem;
+}
+
+.form-registration {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.form-registration input {
+  width: 100%;
+  margin: 0px 0 10px;
+}
+.form-registration .btn {
+  flex: 1 0 100%;
+}
+
+.my-errors {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  color: #333;
+  font-size: 1.2rem;
+  display: table;
+}
+.my-errors li {
+  margin: 0 0 1rem;
+}
+.my-errors li:before {
+  content: "! Error : ";
+  color: #f00;
+  font-weight: bold;
+}
+
+.listing-table {
+  width: 100%;
+}
+.listing-table th {
+  padding: 10px;
+  border-bottom: 1px solid #666;
+  background: #000;
+  color: #fff;
+}
+.listing-table th:first-child {
+  border-right: 1px solid #666;
+}
+.listing-table td {
+  padding: 10px;
+  border-bottom: 1px solid #666;
+}
+.listing-table td:first-child {
+  border-right: 1px solid #666;
+}
+
+/*# sourceMappingURL=styles.css.map */

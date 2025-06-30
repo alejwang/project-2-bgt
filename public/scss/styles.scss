@@ -1,0 +1,241 @@
+@import "colors.scss";
+@import "nav.scss";
+
+/* Variables */
+$fontFamily1: "Inter", sans-serif;
+$fontFamily2:  "Bitcount Grid Double", system-ui;
+$fontSizeH1: 3em;
+$fontSizeH2: 2.5em;
+$fontSizeH3: 2em;
+$fontSizeSmall: 0.85em;
+
+
+html {
+  // Operations
+  font-size: 0.8em + 0.2;           //1 
+  width: 100%;
+  height: 100%;
+    box-sizing: border-box;
+
+}
+
+body{
+  font-family: $fontFamily1;
+  background: $backgroundColor1;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+
+header {
+    height: 50px;
+    width: 100%;
+    margin: 1em auto 1em auto;
+}
+
+main {
+    background: $mainColor;
+    width: 100%;
+    min-height: 600px;
+    height: auto;
+    padding: 1.5%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+
+    #left {
+      // float: left;
+      box-sizing: border-box;
+      width: 50%;
+      height: 600px;
+
+
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: grayscale(51%) brightness(134%) opacity(36%);
+        -webkit-filter: grayscale(51%) brightness(134%) opacity(36%);
+        -moz-filter: grayscale(51%) brightness(134%) opacity(36%);
+      }
+    }
+
+    #right {
+      // float: right;
+      width: 50%;
+      height: 600px;
+      box-sizing: border-box;
+      padding: 0 2em;
+    }
+
+    #full {
+      width: 100%;
+      height: 100%;
+      min-height: 600px;
+      float:left;
+      background: $sectionColor;
+      text-align: center;
+      box-sizing:border-box;
+      padding-top: 8em;
+
+      h1 {
+        padding: 0;
+      }
+      h3 {
+        font-size: $fontSizeH3;
+        color: $color3;
+      }
+
+      span {
+        font-family: $fontFamily2;
+        font-size: 2em;
+      }
+    }
+
+    #panel {
+      width: 100%;
+      height: 100%;
+      min-height: 200%;
+      // float:left;
+      background: $sectionColor;
+      text-align: center;
+      box-sizing:border-box;
+      padding: 1em 0 1em 0;
+      margin-bottom: 1em;
+      h3 {
+        font-size: $fontSizeH3;
+        color: $color3;
+      }
+      ul {
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        li {
+          width: 100px;
+          height: 100px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: white;
+          // display: inline-block;
+          margin: 0 1em;
+          color: $color3;
+          font-size: $fontSizeSmall;
+          a {
+            color: $color2;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+}
+
+footer {
+    width: 1350px;
+    margin: 2em auto;
+    padding-left: 80px;
+    font-size: $fontSizeSmall;
+}
+
+a {
+    text-decoration: none;
+    &:hover {
+        // text-decoration: underline;
+        cursor: pointer;
+    }
+}
+
+// @extend 
+button {
+  color: $color4;
+  width: 120px;
+  height: 40px;
+  margin: 2em;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+.submit-button {
+  @extend button;
+  border: 1px $color3;
+  background: $backgroundColor1;
+
+}
+.submit-button.secondary {
+  @extend button;
+  color: $backgroundColor1;
+  border: 1px solid $backgroundColor1;
+  background: $sectionColor;
+
+}
+/* css for registration form and errors*/
+/* Styles for listing table */
+body {
+	padding: 40px 10px;
+	// background-color: #eee;
+}
+.listing-reg {
+	h1 {
+		text-align: center;
+		margin: 0 0 2rem;
+	}
+}
+.form-registration {
+	max-width: 330px;
+	padding: 15px;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	input {
+		width: 100%;
+		margin: 0px 0 10px;
+	}
+	.btn {
+		flex: 1 0 100%;
+	}
+}
+.my-errors {
+	margin: 0 auto;
+	padding: 0;
+	list-style: none;
+	color: #333;
+	font-size: 1.2rem;
+	display: table;
+	li {
+		margin: 0 0 1rem;
+		&:before {
+			content: "! Error : ";
+			color: #f00;
+			font-weight: bold;
+		}
+	}
+}
+.listing-table {
+	width: 100%;
+	th {
+		padding: 10px;
+		border-bottom: 1px solid #666;
+		background: #000;
+		color: #fff;
+		&:first-child {
+			border-right: 1px solid #666;
+		}
+	}
+	td {
+		padding: 10px;
+		border-bottom: 1px solid #666;
+		&:first-child {
+			border-right: 1px solid #666;
+		}
+	}
+}

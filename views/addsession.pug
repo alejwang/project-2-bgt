@@ -1,0 +1,53 @@
+extends layout
+
+block content
+    -data = data || {}
+
+    section#full
+        if errors
+            ul.my-errors
+                for error in errors
+                    li= error.msg
+        h1 Log a new game session
+        form(action="/add" method="POST" class="form-registration")
+            label(for="name") Date:
+            input(
+                type="text"
+                id="date"
+                name="date"
+                class="form-control"
+                value=data.date
+            )
+
+            label(for="email") Game:
+            input(
+                type="text"
+                id="game"
+                name="game"
+                class="form-control"
+                value=data.game
+            )
+
+            label(for="username") Players:
+            input(
+                type="text"
+                id="players"
+                name="players"
+                class="form-control"
+                value=data.players
+            )
+            
+            label(for="password") My Score:
+            input(
+                type="text"
+                id="userScore"
+                name="userScore"
+                class="form-control"
+                value=data.userScore
+            )
+
+            input(
+                type="submit" 
+                value="Save"
+                class="btn btn-lg btn-primary btn-block"
+            )

@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    -data = data || {}
+
+    section#full
+        span Boardy
+        h3 Thank you for your registration.
+        p Now you can log in.
+        //
+            <p class="success">SUCCESS</p>
+            <p class="error">ERROR</p>
+            <p class="warning">WARNING</p>
+        a(href="login")
+            button.submit-button(type="button") Log In
+    

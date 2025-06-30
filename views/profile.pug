@@ -1,0 +1,41 @@
+
+
+extends layout
+
+block content
+  section#panel
+    h3 Games I Played
+    - var gameNames = []
+    - sessions.forEach(function(session) {
+    -   if (gameNames.indexOf(session.game) === -1) gameNames.push(session.game)
+    - })
+    if gameNames.length
+      ul
+        each game in gameNames
+          li= game
+    else
+        p No game played yet :(
+  section#full
+    h3 My Game Sessions
+    if sessions.length
+        table.listing-table.table-dark.table-striped
+            tr
+                th Game
+                th Date
+                th Players
+                th Your Score
+            each session in sessions
+                tr
+                    td= session.game
+                    td= session.date
+                    td= session.players
+                    td= session.userScore
+    else
+        p No game sessions yet :(
+    
+    a(href="add")
+      button.submit-button(type="button") + Log New
+
+    a(href="logout")
+      button.submit-button.secondary(type="button") Log Out
+    
